@@ -10,6 +10,4 @@ jobs:
       options: --shm-size=16gb
     steps:
     - uses: actions/checkout@v4.1.0
-    - uses: "./.github/actions/pre-steps"
     - run: make V=1 J=32 -j32 check
-    - uses: "./.github/actions/post-steps"
